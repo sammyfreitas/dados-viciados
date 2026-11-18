@@ -1,0 +1,30 @@
+const objetivosPool = {
+  "Elfo": {
+    "Mago": "Decifrar os segredos das runas antigas e impedir que a magia corrompida destrua a floresta.",
+    "Paladino": "Proteger a floresta sagrada e derrotar os profanadores que ousaram atravessar seus portões.",
+    "Ladino": "Infiltrar-se na fortaleza sombria e recuperar a joia roubada da rainha élfica.",
+    "Guerreiro": "Defender os portais élficos da invasão dos orcs e manter a honra do seu clã.",
+    "Bardo": "Cantar a balada da Guerra das Estrelas para restaurar a esperança dos exilados."
+  },
+  "Humano": {
+    "Mago": "Quebrar o selo das Catacumbas de Lúmen e recuperar o grimório perdido.",
+    "Paladino": "Proteger o templo da Alvorada e guiar os fiéis em meio ao cerco demoníaco.",
+    "Ladino": "Descobrir a conspiração dos nobres sombrios e revelar a verdade ao reino.",
+    "Guerreiro": "Liderar a resistência contra os invasores bárbaros que ameaçam Valedouro.",
+    "Bardo": "Inspirar coragem nos vilarejos em guerra com canções de liberdade."
+  },
+  "Anão": {
+    "Mago": "Forjar um cajado rúnico alimentado pelo coração das minas ancestrais.",
+    "Paladino": "Defender o clã contra as forças demoníacas que despertaram no subsolo.",
+    "Ladino": "Recuperar o mapa dos túneis roubado pelos inimigos da sua guilda.",
+    "Guerreiro": "Reconquistar o salão perdido dos anões e reerguer o trono de ferro.",
+    "Bardo": "Acordar o Rei Adormecido com canções de bravura e união dos clãs."
+  },
+  "Hobbit": {
+    "Mago": "Quebrar a maldição do sono eterno que assola sua vila pacífica.",
+    "Paladino": "Defender os pequenos povoados e provar que até os menores podem ser heróis.",
+    "Ladino": "Roubar o tesouro do dragão sem ser visto e retornar como lenda.",
+    "Guerreiro": "Proteger as colheitas da vila contra os saqueadores e monstros famintos.",
+    "Bardo": "Contar a história dos heróis esquecidos e ganhar o festival da Colheita."
+  }
+};

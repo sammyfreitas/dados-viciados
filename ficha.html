@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ficha do Herói</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ficha.css">
+  <script src="js/include.js" defer></script>
+  <script src="js/ficha.js" defer></script>
+</head>
+<body>
+  <header></header>
+
+  <main>
+    <section class="card">
+      <h3>Criação da Ficha</h3>
+      <form id="form-ficha">
+
+        <label>Nome:
+          <input type="text" id="nome" required>
+        </label>
+
+        <!-- Ordem: Raça -> Classe -> Arma -> Defesa -->
+        <label>Raça:
+          <select id="raca" required>
+            <option value="">-- Clique e escolha --</option>
+            <option value="Elfo">Elfo</option>
+            <option value="Humano">Humano</option>
+            <option value="Anão">Anão</option>
+            <option value="Hobbit">Hobbit</option>
+          </select>
+        </label>
+
+        <label>Classe:
+          <select id="classe" required>
+            <option value="">-- Clique e escolha --</option>
+            <option value="Mago">Mago</option>
+            <option value="Guerreiro">Guerreiro</option>
+            <option value="Ladino">Ladino</option>
+            <option value="Paladino">Paladino</option>
+            <option value="Bardo">Bardo</option>
+          </select>
+        </label>
+        <br><br>
+        <div class="linha-2col">
+          <label>Arma:
+            <select id="arma" required>
+              <option value="">-- Clique e escolha --</option>
+              <option value="Espada">Espada (d8)</option>
+              <option value="Machado">Machado (d10)</option>
+              <option value="Arco e Flecha">Arco e Flecha (d6)</option>
+              <option value="Feitiço">Feitiço (d12)</option>
+            </select>
+          </label>
+
+          <label>Defesa:
+            <select id="defesa" required>
+              <option value="Nenhum">Nenhum (0)</option>
+              <option value="Cota de Malha">Cota de Malha (−0 | reduz 1 e deixa mão livre)</option>
+              <option value="Escudo de Madeira">Escudo de Madeira (−0 | reduz 1)</option>
+              <option value="Escudo de Ferro">Escudo de Ferro (−1 ponto | reduz 2)</option>
+              <option value="Escudo Sagrado">Escudo Sagrado (−2 pontos | reduz 3)</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="equip-info" class="narrativa"></div>
+        <div id="custo-info" class="narrativa"></div>
+
+        <h3>Atributos (<span id="total-disponivel">17</span> pontos)</h3>
+        <p>Pontos restantes: <span id="pontos-restantes">17</span></p>
+
+        <div class="atributos">
+          <label>Força: <span id="val-forca">0</span></label>
+          <input type="range" id="forca" min="0" max="17" value="0" list="tickmarks">
+
+          <label>Agilidade: <span id="val-agilidade">0</span></label>
+          <input type="range" id="agilidade" min="0" max="17" value="0" list="tickmarks">
+
+          <label>Destreza: <span id="val-destreza">0</span></label>
+          <input type="range" id="destreza" min="0" max="17" value="0" list="tickmarks">
+
+          <label>Carisma: <span id="val-carisma">0</span></label>
+          <input type="range" id="carisma" min="0" max="17" value="0" list="tickmarks">
+
+          <label>Inteligência: <span id="val-inteligencia">0</span></label>
+          <input type="range" id="inteligencia" min="0" max="17" value="0" list="tickmarks">
+
+          <label>Furtividade: <span id="val-furtividade">0</span></label>
+          <input type="range" id="furtividade" min="0" max="17" value="0" list="tickmarks">
+        </div>
+
+        <datalist id="tickmarks">
+          <option value="0" label="0"></option>
+          <option value="5" label="5"></option>
+          <option value="10" label="10"></option>
+          <option value="15" label="15"></option>
+          <option value="17" label="17"></option>
+        </datalist>
+
+        <h3>Tabela de Atributos</h3>
+        <table id="tabela-bonus">
+          <thead>
+            <tr>
+              <th>Atributo</th>
+              <th>Escolhido</th>
+              <th>Bônus Classe</th>
+              <th>Bônus Raça</th>
+              <th>Total Final</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Força</td><td id="esc-forca">0</td><td id="bonus-classe-forca">0</td><td id="bonus-raca-forca">0</td><td id="total-forca">0</td></tr>
+            <tr><td>Agilidade</td><td id="esc-agilidade">0</td><td id="bonus-classe-agilidade">0</td><td id="bonus-raca-agilidade">0</td><td id="total-agilidade">0</td></tr>
+            <tr><td>Destreza</td><td id="esc-destreza">0</td><td id="bonus-classe-destreza">0</td><td id="bonus-raca-destreza">0</td><td id="total-destreza">0</td></tr>
+            <tr><td>Carisma</td><td id="esc-carisma">0</td><td id="bonus-classe-carisma">0</td><td id="bonus-raca-carisma">0</td><td id="total-carisma">0</td></tr>
+            <tr><td>Inteligência</td><td id="esc-inteligencia">0</td><td id="bonus-classe-inteligencia">0</td><td id="bonus-raca-inteligencia">0</td><td id="total-inteligencia">0</td></tr>
+            <tr><td>Furtividade</td><td id="esc-furtividade">0</td><td id="bonus-classe-furtividade">0</td><td id="bonus-raca-furtividade">0</td><td id="total-furtividade">0</td></tr>
+          </tbody>
+        </table>
+
+        <p id="texto-narrativo" class="narrativa"></p>
+
+        <button type="submit" id="btn-iniciar">Iniciar Aventura</button>
+        <button type="button" id="salvar-ficha">Salvar Ficha</button>
+        <button type="button" id="enviar-ficha">Enviar por WhatsApp</button>
+      </form>
+    </section>
+
+    <!-- Manual curto na ficha -->
+    <section class="card manual">
+      <h2>📜 Manual Rápido</h2>
+      <p>Itens defensivos fortes consomem pontos de atributo (mostrados acima). 
+        <br>A Cota de Malha reduz 1 e deixa uma mão livre.</p>
+        <p>O dano do ataque considera <strong>o maior</strong> entre o dado da arma e os dados obtidos via <strong>Força/Destreza</strong> (destreza representa sua habilidade).</p>    
+        <p>Você tem 15 rodadas para completar seu objetivo. A cada 5 rodadas aparece um Chefe (rodadas 5, 10 e 15).</p>
+        <p>Cada classe e raça possuem atributos inatos, que não podem ser alterados e que aumentam seus atributos.</p>
+    </section>
+  </main>
+
+  <footer></footer>
+</body>
+</html>

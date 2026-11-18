@@ -1,0 +1,24 @@
+/* Ajustes mínimos; todo o tema vem de css/style.css */
+
+#form-ficha > label { display:block; margin-bottom:8px; }
+
+/* Arma/Defesa lado a lado em telas largas */
+.linha-2col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:6px;
+}
+@media (max-width: 640px){
+  .linha-2col { grid-template-columns:1fr; }
+}
+
+#equip-info, #custo-info { margin-top:6px; }
+
+#total-disponivel { color:#8b0000; font-weight:bold; }
+#pontos-restantes { font-weight:bold; }
+
+.atributos label { display:flex; justify-content:space-between; align-items:center; }
+.atributos input[type=range] { height:14px; margin:6px 0 14px; }
+
+#tabela-bonus { width:100%; }

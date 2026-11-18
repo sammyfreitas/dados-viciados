@@ -1,0 +1,42 @@
+/* file: css/jogo.css  (complementa style.css) */
+
+/* linha de botões */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* base do botão-dado */
+.btn-dado {
+  display: inline-block;
+  padding: 12px 16px;
+  font-weight: bold;
+  border: 2px solid #5a3b1e;
+  font-family: 'MedievalSharp', cursive;
+  cursor: pointer;
+  transition: transform .15s ease, filter .15s ease;
+  color: #2d1a0c;
+}
+.btn-dado:hover { transform: scale(1.05); filter: brightness(1.05); }
+
+/* formas: d6 cubo, d8+ poliedro */
+.btn-dado.d6 { border-radius: 6px; }
+.btn-dado.d8, .btn-dado.d10, .btn-dado.d12, .btn-dado.d20 {
+  clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+}
+
+/* variantes de ação (cores) */
+.btn-atacar  { background: #e0c066; } /* dourado */
+.btn-furtivo { background: #7fd49a; } /* verde */
+.btn-carisma { background: #caa3f0; } /* lilás */
+.btn-fugir   { background: #94c3f0; } /* azul */
+
+/* tabela de combate ocupa largura */
+#tabela-combate { width: 100%; }
+#tabela-combate th, #tabela-combate td {
+  border: 1px solid #5a3b1e;
+  padding: 6px 10px;
+  text-align: center;
+}

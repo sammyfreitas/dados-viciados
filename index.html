@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dados Viciados</title>
+  <!--Preciso que altere o ícone da página para um ícone de dados-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      
+      <ul>
+        <li><a href="index.html" class="ativo">🏠 Início</a></li>
+        <li><a href="#manual">📜 Manual</a></li> <!--Não seria melhor uma pagina só para o manual? e juntar as informações de todas as páginas que explicam o funcionamento do jogo-->
+        <li><a href="ficha.html">📝 Criar Ficha</a></li>
+        <li><a href="jogo.html">🎮 Jogar</a></li>
+        <li><a href="#sobre">ℹ️ Sobre</a></li>
+        <li><a href="documentacao.html" class="ativo">📚 Documentação</a></li>
+      </ul>
+	  <h2>Dados Viciados ✨ | Jogo RPG</h2>
+	  <div class="redes">
+		<a href="https://www.linkedin.com/in/tony-s-freitas/"><i class="fab fa-linkedin"></i></a>
+		<a href="https://github.com/sammyfreitas/"><i class="fab fa-github"></i></a>
+		<a href="https://www.instagram.com/anthony_tijuduke/"><i class="fab fa-instagram"></i></a>
+		<a href="https://twitter.com/TonySdeFreitas"><i class="fab fa-twitter"></i></a>
+		<a href="https://www.facebook.com/anthonyfreitas78"><i class="fab fa-facebook"></i></a>
+		<a href="https://discord.com/channels/999307907160088607/999307907160088609"><i class="fab fa-discord"></i></a>
+		<a href="https://wa.me/+552198614-000"><i class="fab fa-whatsapp"></i></a>
+		<a href="https://sammyfreitas.github.io/portfolioSite/" target="_blank"><i class="fas fa-briefcase"></i></a>
+	  </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>Bem-vindo ao Livro-Jogo RPG</h1>
+      <img class="banner" src="imagens/banner.png" alt="Banner medieval">
+
+      <p style="text-align:center;margin-top:12px;">
+        <a href="ficha.html"><button>⚔️ Criar Ficha</button></a>
+        <a href="jogo.html"><button>📖 Iniciar Aventura</button></a>
+      </p>
+    </section>
+
+    <!-- Manual completo -->
+    <section class="card manual" id="manual">
+      <h2>📜 Manual de Regras do Jogo: Dados Viciados</h2>
+        <h3>1. Fluxo de jogo</h3>
+        <p>
+            Você tem 15 rodadas para completar seu objetivo.<br>
+            A cada passo surgem <strong>eventos</strong> (baús, NPCs) ou <strong>batalhas</strong> onde você pode encontrar poções de cura ou ganhar armas melhores.<br>
+            A cada 5 rodadas aparece um <strong>Chefe</strong> (rodadas 5, 10 e 15).
+        </p>
+
+        <h3>2. Combate (ações possíveis)</h3>
+        <p>
+            • <strong>ATACAR</strong>: usa <strong>Força</strong> + <strong>Destreza</strong> + <strong>dado da arma</strong>.<br>
+            • <strong>SAIR DE MANSINHO</strong>: teste de <strong>Furtividade</strong> para escapar sem lutar.<br>
+            • <strong>CONVENCER O INIMIGO</strong>: teste de <strong>Carisma</strong> para persuadir e evitar o combate.<br>
+            • <strong>FUGIR</strong>: teste de <strong>Agilidade</strong> para recuar antes de levar dano.
+        </p>
+
+        <h3>3. Escala de Dados por Atributo</h3>
+        <div>
+            Quantidade de atributos:
+            <ul>
+                <li>0 → d2</li>
+                <li>1 → d4</li> 
+                <li>2 → d6</li> 
+                <li>3 → d8</li> 
+                <li>4 → d10</li> 
+                <li>5 → d12</li> 
+                <li>6+ → d20</li>
+            </ul>
+            <br>
+        </div>
+        <div>
+            Exemplo: se você tem 3 pontos em Força e 2 em Destreza, seu ataque usará d8 + d6 + dado da arma.
+            <br>Essa lógica vale para:
+            <ul>
+                <li>Força (ataque/dano) - dá porrada</li>
+                <li>Destreza (habilidade de ataque) - acerta a porrada</li>
+                <li>Inteligência (desafios lógicos) - solta magia como se fosse uma porrada</li>
+                <li>Furtividade (escapar) - passa sorrateiro sem ninguém ver para não levar porrada (ou não)</li>
+                <li>Carisma (convencer) - convence a não apanhar</li>
+                <li>Agilidade (fugir/testes de ação) - foge da porrada</li>
+        </div>
+
+    <h3>4. Armas e Defesa</h3>
+      <p>
+        Cada arma tem um dado base:
+        <ul>
+            <li>Adaga d4</li>
+            <li>Arco d6</li>
+            <li>Espada d8</li>
+            <li>Machado d10</li>
+            <li>Feitiço d12</li>
+        </ul>
+        O dano do ataque considera <strong>o maior</strong> entre o dado da arma e os dados obtidos via <strong>Força/Destreza</strong> (destreza representa sua habilidade).
+        Itens defensivos reduzem dano imediatamente: 
+        <ul>
+            <li><strong>Cota de Malha</strong> (−1 dano e deixa uma mão livre)</li>
+            <li><strong>Escudo de Madeira</strong> (−1 dano)</li>
+            <li><strong>Escudo de Ferro</strong> (−2 dano, custa 1 pt de atributo)</li>
+            <li><strong>Escudo Sagrado</strong>  (−3 dano, custa 2 pt de atributo)</li>
+            <li>    </li>
+        </ul>
+      </p>
+
+      <h3>5. Eventos e Desafios</h3>
+      <p>
+        • <strong>Baús</strong> podem conter armas raras, poções ou armadilhas.<br>
+        • <strong>Desafios lógicos</strong> (perguntas/enigmas) usam <strong>Inteligência</strong>: quanto maior, mais fácil.<br>
+        • Recompensas: poções de cura/mana, armas melhores, itens especiais.
+      </p>
+
+      <h3>6. Dicas</h3>
+      <p>
+        Seus atributos fazem diferença real: 
+        <ul>
+            <li><strong>Destreza</strong> melhora o uso da arma;</li>
+            <li><strong>Força</strong> aumenta seu dado de dano;</li>
+            <li><strong>Inteligência</strong> facilita desafios;</li>
+            <li><strong>Furtividade/Carisma/Agilidade</strong> abrem rotas alternativas.</li>
+        </ul> 
+        Escolha suas batalhas: fugir ou convencer pode ser melhor que lutar.<br> 
+        Use poções sabiamente.<br>
+        Planeje seu progresso: economize pontos para os chefes.<br>
+      </p>
+
+      <h3>7. Jogabilidade</h3>
+            <p>
+                - Com a ficha pronta, você cai direto na aventura.<br>
+                - Eventos, escolhas e batalhas vão brotar sem aviso — igual boleto.<br>
+                - Pode <strong>salvar sua história</strong> em .txt ou 
+                <strong>mandar sua ficha pelo WhatsApp</strong> (ótimo pra esfregar na cara do amigo que disse que Ladino não presta).<br>
+            </p>
+
+            <p><strong>⚔️ Boa sorte, e que os dados viciados estejam ao seu favor!</strong></p>
+    </section>
+  </main>
+    
+  <footer>
+    <section id="sobre">
+        <h2>ℹ️ Sobre</h2>
+        <p>
+            Este projeto foi criado por <strong>Anthony Freitas</strong>, engenheiro, professor
+            e contador de histórias bugadas. <br>
+            É uma mistura de RPG de mesa, programação web e humor nerd, com direito a muito JavaScript medieval.
+        </p>
+        <p>
+            <strong>O objetivo?</strong>
+            <br>Mostrar que com alguns pontos de atributo, um pouco de criatividade e linhas de código, 
+            <br>qualquer um pode viver uma aventura épica (ou trágica, dependendo da rolagem do dado).
+        </p>
+        <p>
+            <em>"Um bug, um herói e um café frio — a verdadeira trilogia da programação."</em>
+        </p>
+    </section>
+    <hr>
+    <div>© Livro-Jogo RPG</div>
+    <p>Desenvolvido por Anthony Freitas, 2025 ✨ | Jogo Dados Viciados - RPG</p>
+	<p>Veja outros projetos <a href="https://sammyfreitas.github.io/portfolioSite/games.html" target="_blank">aqui</p>
+	<div class="redes">
+		<a href="https://www.linkedin.com/in/tony-s-freitas/"><i class="fab fa-linkedin"></i></a>
+		<a href="https://github.com/sammyfreitas/"><i class="fab fa-github"></i></a>
+		<a href="https://www.instagram.com/anthony_tijuduke/"><i class="fab fa-instagram"></i></a>
+		<a href="https://twitter.com/TonySdeFreitas"><i class="fab fa-twitter"></i></a>
+		<a href="https://www.facebook.com/anthonyfreitas78"><i class="fab fa-facebook"></i></a>
+		<a href="https://discord.com/channels/999307907160088607/999307907160088609"><i class="fab fa-discord"></i></a>
+		<a href="https://wa.me/+5521986140005"><i class="fab fa-whatsapp"></i></a>
+		<a href="https://sammyfreitas.github.io/portfolioSite/" target="_blank"><i class="fas fa-briefcase"></i></a>
+	</div>
+  </footer>
+
+  <!-- Font Awesome opcional para ícones do menu -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+</body>
+
+</html>

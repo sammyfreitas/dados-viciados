@@ -1,0 +1,99 @@
+## 📂 Estrutura proposta de arquivos
+
+### 1. **index.html**
+
+* Tela inicial
+* Menu com links para:
+
+  * **Ficha do personagem** (ficha.html)
+  * **Jogo** (jogo.html)
+  * **Manual/Documentação** (documentacao.html)
+
+---
+
+### 2. **ficha.html**
+
+* Formulário para criar o personagem (nome, raça, classe, atributos).
+* Escolha de arma e escudo/cota de malha.
+* Botão **Salvar Ficha** (em localStorage).
+* Botão **Enviar para WhatsApp**.
+
+📌 **Scripts**:
+
+* **ficha.js** → controla pontos, bônus, restrições, cálculo de HP, defesa etc.
+* **ficha.css** → estilização (seguindo o mesmo padrão do style.css).
+
+---
+
+### 3. **jogo.html**
+
+* Carrega ficha do localStorage.
+* Mostra:
+
+  * Retrato do herói (classe+raça).
+  * Tabela de atributos.
+  * Tabela do inimigo.
+  * Caixa de narrativa (história).
+  * Tabela de combate.
+  * **Botões fixos**: ATACAR, SAIR DE MANSINHO, CONVENCER, FUGIR, USAR ITEM, CONTINUAR.
+* Rodadas (15 → 0).
+* Fluxo: início → eventos/inimigos → fim.
+
+📌 **Scripts**:
+
+* **jogo.js** → lógica central (carrega eventos, inimigos, enigmas, recompensas).
+* **eventos.csv** → lista de eventos.
+* **enigmas.csv** → lista de enigmas.
+* **inimigos.csv** → lista de inimigos (hp, dano, categoria).
+* **recompensas.csv** → o que cada evento/inimigo dá.
+
+---
+
+### 4. **documentacao.html**
+
+* Manual completo.
+* Explicação dos atributos, classes, raças, sistema de dados, loot, etc.
+
+📌 **Scripts**:
+
+* **doc.css** → estilização extra (mas pode herdar de style.css).
+
+---
+
+### 5. **include.js**
+
+* Código utilitário para importar **header.html** e **footer.html** em todas as páginas.
+
+---
+
+### 6. **style.css**
+
+* Estilo global (cores, fontes, fundo).
+
+---
+
+## 📜 CSVs externos (fáceis de editar/ampliar)
+
+* **eventos.csv** → narrativa e tipo do evento.
+* **enigmas.csv** → perguntas, dificuldade e resposta certa.
+* **inimigos.csv** → inimigos (nome, hp, dado de ataque, tipo: fraco/médio/forte/boss).
+* **recompensas.csv** → prêmios ligados a eventos e inimigos.
+
+---
+
+## 🔑 Novo fluxo do `jogo.js`
+
+1. **Carrega ficha** do localStorage (valida obrigatoriamente).
+2. **Inicia jogo**: loga "➡️ A jornada começa..." **só uma vez**.
+3. Para cada rodada:
+
+   * Sorteia se acontece **inimigo** ou **evento**.
+   * Se inimigo → batalha → recompensa automática + loot.
+   * Se evento → mostra opções (ex.: abrir baú, ajudar NPC, responder enigma).
+   * Se evento tem `id` → busca recompensas no **recompensas.csv**.
+4. **Botões fixos** sempre aparecem (não somem).
+
+   * Atacar, Furtividade, Carisma, Fugir, Usar Item, Continuar.
+5. **Tabela de combate** é sempre atualizada (eventos inclusive).
+6. **Fim da jornada**: mensagem final, estatísticas, salvar história.
+

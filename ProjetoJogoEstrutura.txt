@@ -1,0 +1,66 @@
+rpg/ (raiz do site)
+├── index.html
+├── ficha.html
+├── jogo.html
+├── documentacao.html
+│
+├── css/
+│   ├── style.css      (tema global medieval, fundo, tipografia)
+│   ├── ficha.css      (estilo da tela de criação de ficha)
+│   ├── jogo.css       (layout da tela de jogo: botões fixos, tabelas lado a lado)
+│   └── doc.css        (ajustes da documentação/manual)
+│
+├── js/
+│   ├── include.js     (carregar header/footer em todas as páginas)
+│   ├── ficha.js       (gerar e salvar ficha)
+│   └── jogo.js        (fluxo principal do jogo, integra os CSVs)
+│
+├── dados/             (📌 pasta exclusiva para dados em CSV)
+│   ├── eventos.csv        (lista de eventos narrativos)
+│   ├── enigmas.csv        (perguntas e respostas, com dificuldade)
+│   ├── inimigos.csv       (nome, hp, dano, categoria)
+│   └── recompensas.csv    (prêmios, poções, atributos, mana, loot)
+│
+├── imagens/
+│   ├── pergaminho-textura.jpg   (background temático)
+│   ├── retratos/                (📌 subpasta para retratos 3x4 de classes/raças)
+│   │   ├── Mago_Elfo.png
+│   │   ├── Mago_Humano.png
+│   │   ├── Mago_Anão.png
+│   │   ├── Mago_Hobbit.png
+│   │   ├── Guerreiro_Elfo.png
+│   │   ├── Guerreiro_Humano.png
+│   │   ├── Guerreiro_Anão.png
+│   │   ├── Guerreiro_Hobbit.png
+│   │   ├── Ladino_Elfo.png
+│   │   ├── Ladino_Humano.png
+│   │   ├── Ladino_Anão.png
+│   │   ├── Ladino_Hobbit.png
+│   │   ├── Paladino_Elfo.png
+│   │   ├── Paladino_Humano.png
+│   │   ├── Paladino_Anão.png
+│   │   ├── Paladino_Hobbit.png
+│   │   ├── Bardo_Elfo.png
+│   │   ├── Bardo_Humano.png
+│   │   ├── Bardo_Anão.png
+│   │   └── Bardo_Hobbit.png
+│   │
+│   └── icones/                 (📌 ícones extras para botões e efeitos visuais)
+│       ├── espada.png
+│       ├── escudo.png
+│       ├── pocao.png
+│       ├── mana.png
+│       └── dado.png
+│
+├── header.html
+└── footer.html
+
+	
+	
+🎯 Armas escolhidas na ficha → vão para a ficha salva e carregam no jogo.
+🛡️ Escudo/Cota Malha opcional → aparece na ficha e, se selecionado, reduz dano recebido no jogo, mas diminui os pontos de atributo
+🔮 Sistema de mana/magia para mago e bardo.
+👹 Bosses a cada 5 rodadas.
+🧪 Inventário com poções (cura/mana).
+⚔️ Loot de armas com raridade.
+✅ Objetivos ampliados por classe+raça.

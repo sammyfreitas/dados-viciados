@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>RPG Fantasia - Jogo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jogo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="js/include.js" defer></script>
+  <script src="js/jogo.js" defer></script>
+</head>
+<body>
+  <header></header>
+
+  <main>
+    <section class="card jogo-card">
+      <h2>🎮 RPG de Fantasia</h2>
+      <p id="objetivo"></p>
+
+      <!-- Controles iniciais -->
+      <div id="controles-iniciais">
+        <button id="btn-carregar-ficha">📜 Carregar Ficha</button>
+        <button id="btn-iniciar-jogo">▶️ Iniciar Jogo</button>
+      </div>
+
+      <!-- Status -->
+      <div class="heroi-status">
+        <img id="foto-classe" class="foto-classe" src="" alt="Herói">
+        <div id="heroi"></div>
+        <div id="inimigo"></div>
+      </div>
+
+      <!-- Rodadas -->
+      <p>Rodadas restantes: <span id="rodadas">15</span></p>
+
+      <!-- História -->
+      <div id="historia"></div>
+
+      <!-- Botões de ação -->
+      <div id="opcoes"></div>
+
+      <!-- Tabela de combate -->
+      <h3>📊 Registro de Combate</h3>
+      <table class="tabela-heroi">
+        <thead>
+          <tr>
+            <th>Turno</th>
+            <th>Ação</th>
+            <th>HP Inimigo</th>
+            <th>HP Herói</th>
+          </tr>
+        </thead>
+        <tbody id="combate-body"></tbody>
+      </table>
+
+      <!-- Controles de salvar -->
+      <button id="btn-salvar-hist">💾 Salvar História</button>
+      <button id="btn-whats">📲 Enviar Ficha</button>
+    </section>
+  </main>
+
+  <footer></footer>
+</body>
+</html>

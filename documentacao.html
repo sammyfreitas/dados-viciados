@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentação do RPG</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="ficha.html">📝 Criar Ficha</a></li>
+        <li><a href="jogo.html">🎮 Jogar</a></li>
+        <li><a href="documentacao.html" class="ativo">📚 Documentação</a></li>
+      </ul>
+      <div class="redes">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>📚 Documentação do Livro-Jogo RPG</h1>
+      <p>Esta página reúne todas as regras, tabelas e informações do sistema.</p>
+    </section>
+
+    <!-- Sistema de Dados -->
+    <section class="card">
+      <h2>🎲 Sistema de Dados Escalonados</h2>
+      <table id="tabela-bonus">
+        <thead>
+          <tr><th>Atributo</th><th>Dado Usado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>0</td><td>d2</td></tr>
+          <tr><td>1</td><td>d4</td></tr>
+          <tr><td>2</td><td>d6</td></tr>
+          <tr><td>3</td><td>d8</td></tr>
+          <tr><td>4</td><td>d10</td></tr>
+          <tr><td>5</td><td>d12</td></tr>
+          <tr><td>6+</td><td>d20</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Raças e Classes -->
+    <section class="card">
+      <h2>👤 Atributos Inatos</h2>
+      <h3>Raças</h3>
+      <ul>
+        <li>🧝 Elfo → +2 Agilidade</li>
+        <li>👨 Humano → +1 em todos os atributos</li>
+        <li>⛏️ Anão → +2 Força</li>
+        <li>🦶 Hobbit → +2 Furtividade</li>
+      </ul>
+      <h3>Classes</h3>
+      <ul>
+        <li>🧙 Mago → +2 Inteligência</li>
+        <li>⚔️ Guerreiro → +2 Força</li>
+        <li>🗡️ Ladino → +2 Furtividade</li>
+        <li>✨ Paladino → +2 Carisma</li>
+        <li>🎵 Bardo → +1 Carisma e +1 Inteligência</li>
+      </ul>
+    </section>
+
+    <!-- Armas e Defesa -->
+    <section class="card">
+      <h2>🛡️ Armas e Defesas</h2>
+      <h3>Armas</h3>
+      <ul>
+        <li>Espada → d8</li>
+        <li>Machado → d10</li>
+        <li>Arco e Flecha → d6</li>
+        <li>Feitiço → d12</li>
+      </ul>
+      <h3>Defesas</h3>
+      <ul>
+        <li>Nenhum → sem redução</li>
+        <li>Cota de Malha → −1 (sem custo, deixa mão livre)</li>
+        <li>Escudo de Madeira → −1</li>
+        <li>Escudo de Ferro → −2 (−1 ponto de atributo)</li>
+        <li>Escudo Sagrado → −3 (−2 pontos de atributo)</li>
+      </ul>
+    </section>
+
+    <!-- Inimigos -->
+    <section class="card">
+      <h2>👹 Inimigos</h2>
+      <h3>Iniciais</h3>
+      <p>Goblin (HP 8, d4) • Orc (HP 12, d6)</p>
+      <h3>Intermediários</h3>
+      <p>Lobo (HP 14, d6) • Bandido (HP 16, d8)</p>
+      <h3>Avançados</h3>
+      <p>Troll (HP 22, d10) • Demônio (HP 26, d12)</p>
+      <h3>Bosses</h3>
+      <p>Troll Ancião (HP 32, d10+2) • Demônio Maior (HP 45, d12+3) • Dragão Ancião (HP 60, d20)</p>
+    </section>
+
+    <!-- Objetivos -->
+    <section class="card">
+      <h2>✅ Objetivos</h2>
+      <p>Cada classe+raça possui objetivos únicos, como:</p>
+      <ul>
+        <li>Mago Elfo → Recuperar o Grimório de Arvandor</li>
+        <li>Guerreiro Anão → Reconquistar as Minas do Eco</li>
+        <li>Ladino Hobbit → Libertar prisioneiros</li>
+        <li>Paladino Humano → Escoltar peregrinos</li>
+        <li>Bardo Elfo → Compor a Balada da Lua</li>
+      </ul>
+      <p>📌 A lista completa pode ser editada aqui.</p>
+    </section>
+
+    <!-- Situações -->
+    <section class="card">
+      <h2>🎭 Situações Aleatórias</h2>
+      <ul>
+        <li>📦 Encontrar baú → poção, arma rara, ouro</li>
+        <li>🧙 Encontro com sábio → desafio de lógica (teste de Inteligência)</li>
+        <li>⚠️ Armadilha → teste de Agilidade ou perda de HP</li>
+        <li>🤝 NPC pedindo ajuda → recompensa com poção ou equipamento</li>
+      </ul>
+    </section>
+
+    <!-- Manual -->
+    <section class="card manual">
+      <h2>📜 Manual do Aventureiro</h2>
+      <p>Você tem 15 rodadas para cumprir seu objetivo. A cada rodada:</p>
+      <ul>
+        <li>👹 Pode surgir um inimigo</li>
+        <li>📦 Pode aparecer um baú</li>
+        <li>🧙 Pode haver um desafio de lógica</li>
+        <li>👹 A cada 5 rodadas, um Boss</li>
+      </ul>
+      <p>Opções de ação:</p>
+      <ul>
+        <li>⚔️ Atacar (Força + Destreza + Arma)</li>
+        <li>👣 Sair de Mansinho (Furtividade)</li>
+        <li>🗣️ Convencer o Inimigo (Carisma)</li>
+        <li>🏃 Fugir (Agilidade)</li>
+      </ul>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section class="card">
+      <h2>🗂️ Funcionalidades</h2>
+      <ul>
+        <li>🎯 Armas escolhidas na ficha → salvas e usadas no jogo</li>
+        <li>🛡️ Escudo/Cota de Malha opcionais → reduzem dano</li>
+        <li>🔮 Sistema de mana/magia → Mago e Bardo</li>
+        <li>👹 Bosses a cada 5 rodadas</li>
+        <li>🧪 Inventário com poções</li>
+        <li>⚔️ Loot de armas com raridade</li>
+        <li>✅ Objetivos únicos por classe+raça</li>
+        <li>📦 Baús com recompensas</li>
+        <li>🧙 Desafios de lógica (baseados em Inteligência)</li>
+        <li>📜 Histórico da aventura salvo</li>
+        <li>📲 Compartilhamento da ficha via WhatsApp</li>
+        <li>🎲 Botões de dados visuais (d6 cubo, d8/d10/d12/d20 hexagonais)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>⚔️ Livro-Jogo RPG — Documentação do Sistema</p>
+  </footer>
+</body>
+</html>

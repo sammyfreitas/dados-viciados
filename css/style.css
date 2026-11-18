@@ -1,0 +1,301 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1c1c2e;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== HEADER & MENU ====== */
+header {
+  background: #2d2d4d;
+  padding: 10px 20px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.menu ul li {
+  margin: 0 10px;
+}
+.menu ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu ul li a:hover,
+.menu ul li a.ativo {
+  color: #e0c066;
+}
+.redes a {
+  color: #f0f0f0;
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+.redes a:hover {
+  color: #e0c066;
+}
+
+/* ====== MAIN ====== */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* ====== PERGAMINHO ====== */
+.card {
+  background: #f8f1d4 url('imagens/pergaminho-textura.jpg') repeat;
+  border: 4px solid #5a3b1e;
+  border-radius: 12px;
+  padding: 30px;
+  color: #2d1a0c;
+  box-shadow: 0 0 15px #000 inset;
+}
+.card h1, .card h2, .card h3 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #3b1d0b;
+  text-shadow: 1px 1px 0 #fff6d9;
+  text-align: center;
+}
+
+.card img{
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  border: 2px solid #444;
+  border-radius: 8px;
+  width: 1000px;
+  height: 380px;  
+}
+
+input, select, button, h3 {
+  background: #f4e1b7;
+  border: 2px solid #5a3b1e;
+  border-radius: 6px;
+  padding: 6px;
+  font-family: 'MedievalSharp', cursive;
+}
+button {
+  cursor: pointer;
+  background: #e0c066;
+  border: 3px solid #5a3b1e;
+  color: #2d1a0c;
+  font-weight: bold;
+}
+button:hover {
+  background: #d4b24a;
+  box-shadow: 0 0 6px #000;
+}
+
+/* ====== ATRIBUTOS ====== */
+.atributos div {
+  margin: 8px 0;
+}
+input[type=range] {
+  width: 100%;
+}
+#pontos-restantes {
+  font-weight: bold;
+  color: #b22222;
+}
+
+/* ====== TABELA ====== */
+#tabela-bonus {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #f8f1d4;
+  border: 2px solid #5a3b1e;
+  box-shadow: 0 0 10px #000 inset;
+}
+#tabela-bonus th, #tabela-bonus td {
+  border: 1px solid #5a3b1e;
+  padding: 6px;
+  text-align: center;
+}
+#tabela-bonus th {
+  background: #e0c066;
+  color: #2d1a0c;
+  font-family: 'Cinzel Decorative', serif;
+}
+#tabela-bonus td {
+  font-weight: bold;
+}
+
+/* ====== TEXTO NARRATIVO ====== */
+.narrativa {
+  margin-top: 10px;
+  font-style: italic;
+  font-family: 'MedievalSharp', cursive;
+  color: #3b1d0b;
+}
+
+/* ====== HISTÓRIA ====== */
+#historia {
+  white-space: pre-line;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #f8f1d4 url('imagens/pergaminho-textura.jpg') repeat;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 3px solid #5a3b1e;
+  color: #2d1a0c;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.1em;
+  box-shadow: inset 0 0 10px #00000055;
+}
+#opcoes button {
+  display: block;
+  margin: 6px 0;
+}
+.foto {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #444;
+  margin-bottom: 10px;
+}
+.banner {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #2d2d4d;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-family: 'Cinzel Decorative', serif;
+}
+footer .redes {
+  margin-top: 10px;
+}
+footer .redes a {
+  color: #f0f0f0;
+  margin: 0 6px;
+  font-size: 1.2em;
+}
+footer .redes a:hover {
+  color: #e0c066;
+}
+
+.jogo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Retrato medieval */
+.foto-classe {
+  max-width: 90px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+
+  border: 5px solid #c9a227;
+  border-radius: 6px;
+  background: #f8f1d4;
+  box-shadow: 0 0 8px #00000055, inset 0 0 4px #fff8cc; 
+  padding: 3px;
+
+  background-image: linear-gradient(135deg, #d4af37, #c99700, #d4af37);
+  background-clip: padding-box;
+}
+
+/* Container imagem + tabela */
+.heroi-status {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Tabela medieval */
+.tabela-heroi,
+table {
+  border-collapse: collapse;
+  background: #fdf7e3;
+  border: 3px solid #5a3b1e;
+  font-family: 'MedievalSharp', cursive, serif;
+}
+
+.tabela-heroi th,
+.tabela-heroi td,
+table th,
+table td {
+  border: 1px solid #5a3b1e;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.tabela-heroi th,
+table th {
+  background: #e6d6b8;
+  font-weight: bold;
+}
+
+/* Sliders com régua */
+.atributos input[type="range"] {
+  width: 100%;
+  margin: 4px 0;
+}
+
+/* régua (tickmarks) */
+datalist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+datalist option { font-size: 0.8em; color: #2d1a0c; }
+
+/* Sliders estilo barra de energia medieval */
+.atributos input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #d4c19c;
+  border-radius: 6px;
+  outline: none;
+  transition: background 0.3s ease-in-out;
+}
+.atributos input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  background: linear-gradient(to right, #8b0000, #ffcc00);
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+}
+.atributos input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px; height: 18px;
+  background: #2d1a0c;
+  border: 2px solid #ffd700;
+  border-radius: 50%;
+  cursor: grab; margin-top: -4px;
+  transition: transform 0.2s;
+}
+.atributos input[type="range"]::-webkit-slider-thumb:active { transform: scale(1.2); }
+.atributos input[type="range"]::-moz-range-track {
+  height: 10px; background: linear-gradient(to right, #8b0000, #ffcc00); border-radius: 6px;
+}
+.atributos input[type="range"]::-moz-range-thumb {
+  width: 18px; height: 18px; background: #2d1a0c; border: 2px solid #ffd700;
+  border-radius: 50%; cursor: grab; transition: transform 0.2s;
+}
+.atributos input[type="range"]::-moz-range-thumb:active { transform: scale(1.2); }

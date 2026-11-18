@@ -1,0 +1,85 @@
+const eventos = [
+  // ==== BAÚS ====
+  { desc:"📦 Você encontra um baú trancado.", tipo:"bau" },
+  { desc:"💰 Baú enferrujado no canto da estrada.", tipo:"bau" },
+  { desc:"🎁 Um baú brilhante aparece diante de você.", tipo:"bau" },
+  { desc:"📦 Um caixote esquecido na trilha.", tipo:"bau" },
+  { desc:"💼 Baú pequeno com fechadura dourada.", tipo:"bau" },
+
+  // ==== ARMADILHAS ====
+  { desc:"⚠️ Uma armadilha de flechas dispara!", tipo:"armadilha" },
+  { desc:"🪤 Você pisa numa armadilha de urso.", tipo:"armadilha" },
+  { desc:"🏹 Uma corda dispara dardos envenenados.", tipo:"armadilha" },
+  { desc:"💀 Um piso falso desaba sob seus pés.", tipo:"armadilha" },
+  { desc:"🔥 Um círculo de runas explode em fogo.", tipo:"armadilha" },
+
+  // ==== NPCS ====
+  { desc:"🤴 Um mendigo pede uma moeda em troca de bênção.", tipo:"npc" },
+  { desc:"🧙 Um mago oferece ensinar magia em troca de ajuda.", tipo:"npc" },
+  { desc:"👩‍🌾 Uma camponesa pede escolta até a vila próxima.", tipo:"npc" },
+  { desc:"⚒️ Um ferreiro oferece reforjar sua arma.", tipo:"npc", recompensa:"Espada" },
+  { desc:"🧝 Um elfo pede ajuda para resgatar seu irmão.", tipo:"npc" },
+
+  // ==== TESTES ====
+  { desc:"🌉 Uma ponte instável ameaça cair.", tipo:"teste", atributo:"agilidade", dificuldade:8 },
+  { desc:"🧗 Você precisa escalar um penhasco.", tipo:"teste", atributo:"forca", dificuldade:7 },
+  { desc:"💨 Um rio caudaloso deve ser atravessado.", tipo:"teste", atributo:"destreza", dificuldade:8 },
+  { desc:"🕵️ Você tenta se esgueirar por entre guardas.", tipo:"teste", atributo:"furtividade", dificuldade:7 },
+  { desc:"🗣️ Você precisa convencer um guarda desconfiado.", tipo:"teste", atributo:"carisma", dificuldade:9 },
+
+  // ==== ITENS DIRETOS ====
+  { desc:"📜 Você encontra um pergaminho mágico.", tipo:"item", item:"Poção de Mana" },
+  { desc:"🍖 Uma sacola de provisões restaura energia.", tipo:"item", item:"Poção de Cura" },
+  { desc:"🪄 Uma varinha quebrada pode ser consertada.", tipo:"item", item:"Feitiço" },
+  { desc:"⚔️ Um punhal prateado jaz no chão.", tipo:"item", item:"Arma" },
+  { desc:"🛡️ Um escudo antigo repousa encostado numa árvore.", tipo:"item", item:"Escudo de Madeira" },
+
+  // ==== ENIGMAS SIMPLES ====
+  { desc:"💡 Enigma: 'Tenho cidades mas não casas, montanhas mas não árvores. O que sou?'", tipo:"pergunta", resposta:"mapa" },
+  { desc:"💡 Enigma: 'Quanto é 3 + 5?'", tipo:"pergunta", resposta:"8" },
+  { desc:"💡 Enigma: 'O que corre mas não tem pernas?'", tipo:"pergunta", resposta:"rio" },
+  { desc:"💡 Enigma: 'Qual é a capital da França?'", tipo:"pergunta", resposta:"paris" },
+  { desc:"💡 Enigma: 'Sou redondo e marco o tempo. O que sou?'", tipo:"pergunta", resposta:"relógio" },
+
+  // ==== ENIGMAS MÉDIOS ====
+  { desc:"💡 Enigma: 'Se você me tem, quer me compartilhar. Se me compartilha, não me tem. O que sou?'", tipo:"pergunta", resposta:"segredo" },
+  { desc:"💡 Enigma: 'Tenho chaves mas não abro portas. O que sou?'", tipo:"pergunta", resposta:"piano" },
+  { desc:"💡 Enigma: 'Quanto é 12 ÷ 3?'", tipo:"pergunta", resposta:"4" },
+  { desc:"💡 Enigma: 'O que sempre sobe mas nunca desce?'", tipo:"pergunta", resposta:"idade" },
+  { desc:"💡 Enigma: 'Qual é o oposto de norte?'", tipo:"pergunta", resposta:"sul" },
+
+  // ==== ENIGMAS DIFÍCEIS ====
+  { desc:"💡 Enigma: 'O que é maior: meio de 2 ou 1/4 de 8?'", tipo:"pergunta", resposta:"iguais" },
+  { desc:"💡 Enigma: 'Sou leve como uma pluma, mas ninguém pode me segurar. O que sou?'", tipo:"pergunta", resposta:"respiração" },
+  { desc:"💡 Enigma: 'Quantos segundos tem um minuto?'", tipo:"pergunta", resposta:"60" },
+  { desc:"💡 Enigma: 'O que tem dentes mas não morde?'", tipo:"pergunta", resposta:"pente" },
+  { desc:"💡 Enigma: 'O que se quebra quando se fala?'", tipo:"pergunta", resposta:"silêncio" },
+
+  // ==== SITUAÇÕES DIVERSAS ====
+  { desc:"🚪 Uma porta mágica exige senha.", tipo:"pergunta", resposta:"abracadabra" },
+  { desc:"🧟 Você encontra um zumbi amigável pedindo comida.", tipo:"npc" },
+  { desc:"🦉 Uma coruja entrega uma carta enigmática.", tipo:"item", item:"Mapa Antigo" },
+  { desc:"🔮 Uma bola de cristal mostra um futuro incerto.", tipo:"npc" },
+  { desc:"🌪️ Um vendaval ameaça jogar você no abismo.", tipo:"teste", atributo:"forca", dificuldade:9 },
+
+  // ==== MAIS LOOT ====
+  { desc:"⚔️ Um machado pesado está fincado numa árvore.", tipo:"item", item:"Machado" },
+  { desc:"🏹 Um arco refinado foi esquecido no campo.", tipo:"item", item:"Arco e Flecha" },
+  { desc:"🗡️ Um punhal envenenado está escondido numa bolsa.", tipo:"item", item:"Arma" },
+  { desc:"🛡️ Escudo de ferro com brasão antigo.", tipo:"item", item:"Escudo de Ferro" },
+  { desc:"🧴 Poção estranha borbulha sozinha.", tipo:"item", item:"Poção de Cura" },
+
+  // ==== ENCONTROS ====
+  { desc:"🧙 Um alquimista troca itens por ervas raras.", tipo:"npc" },
+  { desc:"👑 Um rei exilado pede sua ajuda.", tipo:"npc" },
+  { desc:"🚶 Um viajante cansado pede companhia.", tipo:"npc" },
+  { desc:"👻 Um espírito oferece conhecimento em troca de vida.", tipo:"npc" },
+  { desc:"🐉 Um dragão jovem aparece, mas não quer lutar.", tipo:"npc" },
+
+  // ==== SITUAÇÕES AMBIENTAIS ====
+  { desc:"🌋 Tremores sacodem o chão!", tipo:"armadilha" },
+  { desc:"🌊 Uma onda gigante cobre o caminho.", tipo:"teste", atributo:"destreza", dificuldade:9 },
+  { desc:"🌲 Árvores encantadas bloqueiam a passagem.", tipo:"teste", atributo:"inteligencia", dificuldade:8 },
+  { desc:"💤 Um gás sonífero preenche a sala.", tipo:"teste", atributo:"fortitude", dificuldade:8 },
+  { desc:"🧩 Uma parede mágica pede solução de quebra-cabeça.", tipo:"pergunta", resposta:"chave" }
+];
